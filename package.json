@@ -1,5 +1,5 @@
 {
-  "name": "asyncloops",
+  "name": "@alexsergey/async-loop",
   "version": "1.0.0",
   "description": "Async loop and inverse async loop",
   "main": "dist/main.js",
@@ -19,7 +19,7 @@
       "^.+\\.(js|jsx|ts)$": "<rootDir>/node_modules/rocket-tester/babelJest.js"
     }
   },
-  "author": "Aleksandrov Sergey <gooddev.sergey@gmail.com> (https://github.com/AlexSergey/asyncloops)",
+  "author": "Aleksandrov Sergey <gooddev.sergey@gmail.com> (https://github.com/AlexSergey/async-loop)",
   "license": "ISC",
   "dependencies": {
     "valid-types": "1.0.2"

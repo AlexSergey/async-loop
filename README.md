@@ -1,9 +1,9 @@
-# Asyncloops
+# Async Loop
 
 Async loop and inverse async loop
 
 ```js
-import { asyncLoop, inverseAsyncLoop } from 'asyncloops';
+import { asyncLoop, inverseAsyncLoop } from '@alexsergey/async-loop';
 
 asyncLoop(items, (item, loop) => {
     //.. async logic

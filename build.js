@@ -1,3 +1,3 @@
 const { libraryCompiler } = require('rocket-starter');
 
-libraryCompiler('asyncloops', {});
+libraryCompiler('asyncLoop', {});
