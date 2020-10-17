@@ -1,12 +1,18 @@
 {
   "name": "@alexsergey/async-loop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Async loop and inverse async loop",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "NODE_ENV=development node build",
-    "build": "NODE_ENV=production node build",
-    "test": "jest --forceExit"
+    "start": "cross-env NODE_ENV=development node build",
+    "build": "cross-env NODE_ENV=production node build",
+    "test": "cross-env NODE_ENV=development node tests",
+    "production": "npm test && npm run build && npm publish"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
   },
   "keywords": [
     "async",
@@ -14,18 +20,14 @@
     "async loop",
     "inverse async loop"
   ],
-  "jest": {
-    "transform": {
-      "^.+\\.(js|jsx|ts)$": "<rootDir>/node_modules/rocket-tester/babelJest.js"
-    }
-  },
   "author": "Aleksandrov Sergey <gooddev.sergey@gmail.com> (https://github.com/AlexSergey/async-loop)",
   "license": "ISC",
   "dependencies": {
     "valid-types": "1.0.2"
   },
   "devDependencies": {
-    "rocket-starter": "1.0.0",
-    "rocket-tester": "https://github.com/AlexSergey/rocket-tester.git"
+    "@rockpack/compiler": "1.0.0",
+    "@rockpack/tester": "1.0.0",
+    "husky": "4.2.5"
   }
 }

@@ -1,3 +1,13 @@
-const { libraryCompiler } = require('rocket-starter');
+const { libraryCompiler } = require('@rockpack/compiler');
 
-libraryCompiler('asyncLoop', {});
+libraryCompiler({
+  name: 'asyncLoop',
+  cjs: {
+    src: './src',
+    dist: './lib/cjs'
+  },
+  esm: {
+    src: './src',
+    dist: './lib/esm'
+  }
+});
